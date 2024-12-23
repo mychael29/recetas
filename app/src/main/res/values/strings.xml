@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">retotecnicoevol</string>
+    <string name="title_home">Recetas</string>
+    <string name="title_dashboard">Favoritos</string>
+    <string name="title_notifications">Detalle de receta</string>
+    <string name="recipes_app">Recetas App</string>
+    <string name="text_continue">Continue</string>
+    <string name="detail">Detalle</string>
+    <string name="no_recipes_favorite">No tienes recetas favoritos</string>
+</resources>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.exercise.recetas.presentation.ui.MainFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/fragment_main">
+
+        <action
+            android:id="@+id/action_mainFragment_to_recipesDetailFragment"
+            app:destination="@id/recipesDetailFragment" />
+
+        <argument
+            android:name="journey"
+            android:defaultValue="new"
+            app:argType="string"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/recipesDetailFragment"
+        android:name="com.exercise.recetas.presentation.ui.recipes_detail.RecipesDetailFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_recipes_detail">
+
+        <action
+            android:id="@+id/action_recipesDetailFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+
+        <argument
+            android:name="recipe"
+            app:argType="com.exercise.recetas.presentation.model.Recipe" />
+
+        <argument
+            android:name="journey"
+            app:argType="string"/>
+
+    </fragment>
+
+</navigation>
